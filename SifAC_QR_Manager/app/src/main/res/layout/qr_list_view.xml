@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sifac_qr_manager.view_model.QRList" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.sifac_qr_manager.view.QRListView"
+        android:id="@+id/qr_list">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/qrcode_list"
+            android:name="com.sifac_qr_manager.view.qr_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".view.QRListView"
+            tools:layout_editor_absoluteX="0dp"
+            tools:listitem="@layout/qr_list_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

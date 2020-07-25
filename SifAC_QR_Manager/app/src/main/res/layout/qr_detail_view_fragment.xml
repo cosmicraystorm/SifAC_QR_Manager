@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sifac_qr_manager.view_model.QRDetail" />
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context="com.sifac_qr_manager.view.MainActivity"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/qr_info_layout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:clickable="true">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="更新"
+                    android:id="@+id/qr_update_button"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:hint="エイリアス"
+                    android:text="@={viewModel.name}"
+                    android:id="@+id/qr_alias_box"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Show QR Code"
+                    android:background="@color/colorStage"
+                    android:id="@+id/show_qr_button"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/hotpink"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="3"
+                    android:rowCount="15">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:text="グループ" />
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        android:id="@+id/group_spinner" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:text="キャラクター" />
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="1"
+                        android:id="@+id/character_spinner" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="2"
+                        android:text="アシスト"/>
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="2"
+                        android:id="@+id/assist_level_spinner" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_column="0"
+                        android:layout_row="3"
+                        android:text="スキル名" />
+                    <EditText
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="3"
+                        android:text="@={viewModel.assistSkillName}" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="4"
+                        android:text="ステージ"/>
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="4"
+                        android:id="@+id/stage_level_spinner" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_column="0"
+                        android:layout_row="5"
+                        android:text="スキル名" />
+                    <EditText
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="5"
+                        android:text="@={viewModel.stageSkillName}" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="6"
+                        android:text="カメラ"/>
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="6"
+                        android:id="@+id/camera_level_spinner" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_column="0"
+                        android:layout_row="7"
+                        android:text="スキル名" />
+                    <EditText
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="7"
+                        android:text="@={viewModel.cameraSkillName}" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="8"
+                        android:text="衣装" />
+                    <EditText
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="8"
+                        android:text="@={viewModel.costume}" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="9"
+                        android:text="楽曲" />
+                    <EditText
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="9"
+                        android:text="@={viewModel.music}" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="10"
+                        android:text="難易度" />
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="10"
+                        android:id="@+id/difficulty_spinner" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="11"
+                        android:text="スコアランク" />
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="11"
+                        android:id="@+id/score_rank_spinner" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="12"
+                        android:text="達成度" />
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="12"
+                        android:id="@+id/perfection_spinner" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="13"
+                        android:text="ユーザー名" />
+                    <EditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_columnSpan="2"
+                        android:layout_column="1"
+                        android:layout_row="13"
+                        android:text="@={viewModel.userName}" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_column="0"
+                        android:layout_row="14"
+                        android:text="使用済み" />
+                    <CheckBox
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1"
+                        android:layout_row="14"
+                        android:id="@+id/used_checkbox"
+                        android:checked="@={viewModel.used}"/>
+                </GridLayout>
+            </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

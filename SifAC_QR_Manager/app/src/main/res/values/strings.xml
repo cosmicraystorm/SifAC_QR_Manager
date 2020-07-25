@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">SifAC_QR_Manager</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string-array name="level_array">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="group_array">
+        <item></item>
+        <item>μ"'"s</item>
+        <item>Aqours</item>
+        <item>Saint Snow</item>
+    </string-array>
+    <string-array name="muses_character_array">
+        <item>高坂穂乃果</item>
+        <item>絢瀬絵里</item>
+        <item>南ことり</item>
+        <item>園田海未</item>
+        <item>星空凛</item>
+        <item>西木野真姫</item>
+        <item>東條希</item>
+        <item>小泉花陽</item>
+        <item>矢澤にこ</item>
+    </string-array>
+    <string-array name="Aquours_character_array">
+        <item>高海千歌</item>
+        <item>桜内梨子</item>
+        <item>松浦果南</item>
+        <item>黒澤ダイヤ</item>
+        <item>渡辺曜</item>
+        <item>津島善子</item>
+        <item>国木田花丸</item>
+        <item>小原鞠莉</item>
+        <item>黒澤ルビィ</item>
+    </string-array>
+    <string-array name="saint_snow_character_array">
+        <item>鹿野聖良</item>
+        <item>鹿野理亞</item>
+    </string-array>
+    <string-array name="difficulty_array">
+        <item></item>
+        <item>EASY</item>
+        <item>NORMAL</item>
+        <item>HARD</item>
+        <item>EXTREME</item>
+        <item>CHALLENGE</item>
+        <item>COMBO</item>
+        <item>SWITCH</item>
+        <item>PLUS</item>
+    </string-array>
+    <string-array name="score_rank_array">
+        <item></item>
+        <item>D</item>
+        <item>C</item>
+        <item>B</item>
+        <item>A</item>
+        <item>S</item>
+        <item>SS</item>
+        <item>SSS</item>
+    </string-array>
+    <string-array name="perfection_array">
+        <item></item>
+        <item>FULL COMBO</item>
+        <item>ALL PERFECT</item>
+    </string-array>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
